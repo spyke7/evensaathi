@@ -30,10 +30,10 @@ def load_models():
         key  = fname.replace(".pkl", "")
         if os.path.exists(path):
             MODELS[key] = joblib.load(path)
-            logger.info(f"✓ Loaded {fname}")
+            logger.info(f"Loaded {fname}")
         else:
             missing.append(fname)
-            logger.warning(f"✗ Missing {fname}")
+            logger.warning(f"Missing {fname}")
 
     if missing:
         logger.warning(f"Missing models: {missing}")

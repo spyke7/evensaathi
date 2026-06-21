@@ -3,3 +3,6 @@ joblib==1.5.3
 numpy==2.4.6
 pydantic==2.13.4
 uvicorn
+numpy
+scikit-learn
+xgboost
