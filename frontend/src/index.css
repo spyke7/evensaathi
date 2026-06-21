@@ -1,0 +1,91 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #0d1117;
+  --bg-card:     #161b22;
+  --bg-input:    #1c2128;
+  --bg-hover:    #21262d;
+  --border:      #30363d;
+  --border-light:#21262d;
+  --text:        #e6edf3;
+  --text-muted:  #7d8590;
+  --text-dim:    #484f58;
+  --accent:      #f78166;
+  --accent-dim:  #3d1f1a;
+  --blue:        #58a6ff;
+  --blue-dim:    #1a2d4a;
+  --green:       #3fb950;
+  --green-dim:   #1a3a23;
+  --yellow:      #d29922;
+  --yellow-dim:  #2d2008;
+  --red:         #f85149;
+  --red-dim:     #3d1615;
+  --purple:      #bc8cff;
+  --purple-dim:  #271c40;
+  --font:        'Inter', system-ui, sans-serif;
+  --mono:        'JetBrains Mono', monospace;
+  --radius:      8px;
+  --radius-lg:   12px;
+  --shadow:      0 1px 3px rgba(0,0,0,0.4);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, select, textarea, button {
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(88,166,255,0.1);
+}
+select option { background: var(--bg-card); }
+
+input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.tag-low      { background: var(--green-dim);  color: var(--green); }
+.tag-medium   { background: var(--yellow-dim); color: var(--yellow); }
+.tag-high     { background: var(--accent-dim); color: var(--accent); }
+.tag-critical { background: var(--red-dim);    color: var(--red); }
+.tag-blue     { background: var(--blue-dim);   color: var(--blue); }
