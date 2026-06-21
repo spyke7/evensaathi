@@ -1,4 +1,4 @@
-const BASE = 'http://127.0.0.1:8000'
+const BASE = 'https://evensaathi.onrender.com/'
 
 export async function fetchOptions() {
   const r = await fetch(`${BASE}/options`)
