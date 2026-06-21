@@ -1,4 +1,4 @@
-const BASE = 'https://evensaathi.onrender.com/'
+const BASE = 'https://evensaathi.onrender.com'
 
 export async function fetchOptions() {
   const r = await fetch(`${BASE}/options`)
